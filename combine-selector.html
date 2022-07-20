@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Combine Selector</title>
+    <style>
+        /* Adjacent Sibling Selector (+) */
+        /* Rule akan diterapkan pada elemen paragraf yang berada tepat setelah elemen img */
+        img + p {
+            color: green;
+        }
+
+        /* General Sibling Selector (~) */
+        /* Rule akan diterapkan pada elemen header yang berada tepat setelah elemen img */
+        img ~ p {
+            color: green
+        }
+
+        /* Child Selector (>) */
+        /* Rule akan diterapkan pada elemen paragraf yang merupakan child dari elemen div */
+        div > p {
+            background-color: yellow;
+        }
+
+        /* Descendant Selector (space) */
+        /* Rule akan diterapkan pada elemen paragraf yang merupakan turunan dari elemen div */
+        div p {
+            background-color: aquamarine;
+        }
+    </style>
+</head>
+<body>
+    <!-- Adjacent sibling selector -->
+    <!-- <p>Ini merupakan paragraf pertama. Rule styling tidak akan diterapkan pada elemen paragraf ini.</p>
+    <img src="https://i.imgur.com/cs2BJzw.jpg" alt="Dicoding logo" width="400px">
+    <p>Ini merupakan paragraf kedua dan ditetapkan setelah elemen gambar. Maka paragraf ini seharusnya menerapkan rule dengan menampilkan teks berwarna hijau.</p>
+    <p>Ini merupakan paragraf ketiga. Letaknya memang setelah elemen gambar, namun tidak diletakkan persis setelahnya, sehingga rule tidak akan diterapkan pada elemen ini.</p> -->
+
+    <!-- General Sibling Selector -->
+    <!-- <p>Ini merupakan paragraf pertama. Rule styling tidak akan diterapkan pada elemen paragraf ini.</p>
+    <img src="https://i.imgur.com/cs2BJzw.jpg" alt="Dicoding logo" width="400px">
+    <p>Ini merupakan paragraf kedua dan ditetapkan setelah elemen gambar. Maka paragraf ini menerapkan rule dengan menampilkan teks berwarna hijau.</p>
+    <div>
+    <p>Ini merupakan paragraf ketiga, letaknya setelah elemen gambar, namun paragraf ini dibungkus di dalam div sehingga paragraf ini tidak akan menerapkan rule styling karena tidak memiliki induk yang sama.</p>
+    </div>
+    <p>Ini merupakan paragraf empat. Letaknya memang setelah elemen gambar dan memiliki induk yang sama seperti elemen gambar, sehingga elemen ini akan menerapkan rule dengan menampilkan teks berwarna hijau.</p> -->
+
+    <!-- Child Selector -->
+    <!-- <div>
+        <p>Paragraf pertama. di dalam div.</p>
+        <p>Paragraf kedua. di dalam div.</p>
+        <section><p>Paragraf ketiga. di dalam div namun bukan sebagai anak elemen secara langsung.</p></section>
+        <p>Paragraf keempat. di dalam div.</p>
+    </div>
+    <p>Paragraf kelima. di luar div.</p>
+    <p>Paragraf keenam. di luar div.</p> -->
+
+    <!-- Descendant Selector -->
+    <div>
+        <p>Paragraf pertama. di dalam div.</p>
+        <p>Paragraf kedua. di dalam div.</p>
+        <section><p>Paragraf ketiga. di dalam div walaupun bukan sebagai anak elemen secara langsung, namun termasuk dalam turunannya.</p></section>
+        <p>Paragraf keempat. di dalam div.</p>
+    </div>
+    <p>Paragraf kelima. di luar div.</p>
+    <p>Paragraf keenam. di luar div.</p>
+</body>
+</html>
